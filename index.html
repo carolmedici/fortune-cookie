@@ -11,18 +11,20 @@
 <body>
     <main>
         <div class="cookie">
-            <h1>Qual é a sua sorte de hoje?</h1>
-            <p>Abra o biscoito e descubra</p>
-            <button class="open-cookie-btn"><img class="cookie-img" src="assets/images/fortune-cookie.png" alt="Image of a fortune cookie"></button>
+            <h1>Trocadilhos para divertir o seu dia</h1>
+            <p>Abra o biscoito e sorria :)</p>
+            <button class="open-cookie-btn" onclick="openCookie()"><img class="cookie-img" src="assets/images/fortune-cookie.png" alt="Image of a fortune cookie" ></button>
         </div>
         
         
         <div class="opened-cookie hide">
-            <h1>Aqui está a sua sorte de hoje:</h1>
-            <p>Aqui vem a sorte do dia</p>
+            <h1>Aqui está seu trocadilho de hoje:</h1>
+            <p class="lucky">Aqui vem a sorte do dia</p>
             <img class="open-cookie-img" src="assets/images/opened-cookie.png" alt="Image of an opened fortune cookie">
-            <button type="submit">Abrir outro biscoito</button>
+            <button type="submit" onclick="returnCookie()">Abrir outro biscoito</button>
         </div>
     </main>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
