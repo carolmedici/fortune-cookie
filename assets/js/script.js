@@ -1,6 +1,7 @@
 const luckyCookie = document.querySelector('.cookie')
 const openedCookie = document.querySelector('.opened-cookie')
 const lucky = document.querySelector('.lucky')
+let index = Math.round(Math.random() * 9);
 
 
 const messages = [
@@ -23,13 +24,13 @@ const messages = [
     message:'Qual cachorro gosta de mergulhar? O Pittbum.'
 },
 {
-    message:'Qual é a tecla favorita do astronauta? O espaço;'
+    message:'Qual é a tecla favorita do astronauta? O espaço.'
 },
 {
-    message:'Qual o nome da mãe de todos os legumes? Mãe-dioca;'
+    message:'Qual o nome da mãe de todos os legumes? Mãe-dioca.'
 },
 {
-    message:' Como se chama o coveiro do cemitério? O Seu Pultura'
+    message:' Como se chama o coveiro do cemitério? O Seu Pultura.'
 },
 {
     message:'O que o Aquaman faz para salvar o mundo? Nada.'
@@ -38,30 +39,26 @@ const messages = [
 
 let newMessage = []
 
-for( var index = 0; index < messages.length; index++){
-
 
     for( let newMess of messages){
         newMessage.push(newMess.message)
         
-}}
+    }
 
+function openCookie(){
+    hideToggle()
+    lucky.innerHTML = newMessage[index]
+}
+
+
+function returnCookie(){
+    location.reload()
+    hideToggle()
+   
+   
+}
 
 function hideToggle(){
     luckyCookie.classList.toggle('hide')
     openedCookie.classList.toggle('hide')
 }
-
-
-function openCookie(){
-    hideToggle()
-    lucky.innerHTML = newMessage[index]
-
-}
-
-
-function returnCookie(){
-    hideToggle()
-    index++
-}
-
